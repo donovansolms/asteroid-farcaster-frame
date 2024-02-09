@@ -110,7 +110,7 @@ export default async function Home({
           pathname="/"
         >
           <FrameImage>
-            <img style={{ position: "absolute", top: "0px", left: "0px" }} width="100%" height="100%" src="http://localhost:3000/content/framebg.png" />
+            <img style={{ position: "absolute", top: "0px", left: "0px" }} width="100%" height="100%" src="https://frames.asteroidprotocol.io/content/framebg.png" />
             <div style={{ position: "absolute", top: "0px", left: "0px", width: "100%", height: "100%", opacity: "0.3", backgroundColor: "#000000" }} />
             <div style={{ display: "flex", position: "absolute", top: "0px", left: "0px", color: "#fff", width: "100%", justifyContent: 'center' }}>
               <div style={{ display: "flex", position: "absolute", top: "100px", left: "0px", color: "#fff", width: "100%", justifyContent: 'center' }}>
@@ -151,7 +151,7 @@ export default async function Home({
       >
         {/* <FrameImage src="https://framesjs.org/og.png" /> */}
         <FrameImage>
-          <img style={{ position: "absolute", top: "0px", left: "0px" }} width="100%" height="100%" src="http://localhost:3000/content/framebg.png" />
+          <img style={{ position: "absolute", top: "0px", left: "0px" }} width="100%" height="100%" src="https://frames.asteroidprotocol.io/content/framebg.png" />
           <div style={{ position: "absolute", top: "0px", left: "0px", width: "100%", height: "100%", opacity: "0.3", backgroundColor: "#000000" }} />
           <div style={{ display: "flex", position: "absolute", top: "0px", left: "0px", color: "#fff", textAlign: "center" }}>
             <img style={{ position: "absolute", top: "40px", left: "400px", borderRadius: "10px" }} width={350} height={350} src={result.data.inscription[0].content_path} />
