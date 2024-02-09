@@ -2,7 +2,6 @@ import {
   FrameButton,
   FrameContainer,
   FrameImage,
-  FrameInput,
   FrameReducer,
   NextServerPageProps,
   getPreviousFrame,
@@ -11,7 +10,6 @@ import {
 } from "frames.js/next/server";
 import Link from "next/link";
 import { DEBUG_HUB_OPTIONS } from "./debug/constants";
-import { getTokenUrl } from "frames.js";
 import { ApolloClient, InMemoryCache, HttpLink, gql } from '@apollo/client';
 
 
@@ -80,9 +78,6 @@ export default async function Home({
   }
 `;
 
-  console.log("LOAD USER'S FIRST LISTED INSCRIPTION");
-  // Query graphql server with the following query
-
   const client = new ApolloClient({
     link: new HttpLink({
       uri: 'https://api.asteroidprotocol.io/v1/graphql', // Replace this with your GraphQL server URI
@@ -139,7 +134,7 @@ export default async function Home({
   // then, when done, return next frame
   return (
     <div className="p-4">
-      frames.js starter kit.{" "}
+      Asteroids Protocol Demo.{" "}
       <Link href={`/debug?url=${baseUrl}`} className="underline">
         Debug
       </Link>
@@ -151,8 +146,8 @@ export default async function Home({
       >
         {/* <FrameImage src="https://framesjs.org/og.png" /> */}
         <FrameImage>
-          <img style={{ position: "absolute", top: "0px", left: "0px" }} width="100%" height="100%" src="https://frames.asteroidprotocol.io/content/framebg.png" />
-          <div style={{ position: "absolute", top: "0px", left: "0px", width: "100%", height: "100%", opacity: "0.3", backgroundColor: "#000000" }} />
+          {/* <img style={{ position: "absolute", top: "0px", left: "0px" }} width="100%" height="100%" src="https://frames.asteroidprotocol.io/content/framebg.png" /> */}
+          <div style={{ position: "absolute", top: "0px", left: "0px", width: "100%", height: "100%", opacity: "1.0", backgroundColor: "#0d1f51" }} />
           <div style={{ display: "flex", position: "absolute", top: "0px", left: "0px", color: "#fff", textAlign: "center" }}>
             <img style={{ position: "absolute", top: "40px", left: "400px", borderRadius: "10px" }} width={350} height={350} src={result.data.inscription[0].content_path} />
             <div style={{ display: "flex", position: "absolute", top: "360px", left: "0px", color: "#fff", width: "100%", justifyContent: 'center' }}>
