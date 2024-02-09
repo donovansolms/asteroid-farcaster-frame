@@ -36,9 +36,10 @@ export default async function Home({
     ...DEBUG_HUB_OPTIONS,
   });
 
-  if (frameMessage && !frameMessage?.isValid) {
-    throw new Error("Invalid frame payload");
-  }
+  // if (frameMessage && !frameMessage?.isValid) {
+  //   throw new Error("Invalid frame payload");
+  // }
+
 
   const [state, dispatch] = useFramesReducer<State>(
     reducer,
@@ -105,8 +106,8 @@ export default async function Home({
           pathname="/"
         >
           <FrameImage>
-            <img style={{ position: "absolute", top: "0px", left: "0px" }} width="100%" height="100%" src="https://frames.asteroidprotocol.io/content/framebg.png" />
-            <div style={{ position: "absolute", top: "0px", left: "0px", width: "100%", height: "100%", opacity: "0.3", backgroundColor: "#000000" }} />
+            {/* <img style={{ position: "absolute", top: "0px", left: "0px" }} width="100%" height="100%" src="https://frames.asteroidprotocol.io/content/framebg.png" /> */}
+            <div style={{ position: "absolute", top: "0px", left: "0px", width: "100%", height: "100%", opacity: "1.0", backgroundColor: "#0d1f51" }} />
             <div style={{ display: "flex", position: "absolute", top: "0px", left: "0px", color: "#fff", width: "100%", justifyContent: 'center' }}>
               <div style={{ display: "flex", position: "absolute", top: "100px", left: "0px", color: "#fff", width: "100%", justifyContent: 'center' }}>
                 {result.data.inscription[0].mime} can't be displayed
